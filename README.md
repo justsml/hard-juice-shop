@@ -153,7 +153,7 @@ APPLICATION_WELCOME_TITLE='Welcome to Alt Market!' \
 APPLICATION_WELCOME_MESSAGE='<p class="welcome-text">Explore our latest offers and account features.</p>' \
 APPLICATION_COOKIE_MESSAGE='We use cookies to keep your session running.' \
 APPLICATION_TRANSLATION_OVERRIDES='{"*":{"TITLE_BASKET":"Bag","TITLE_LOGIN":"Sign in"},"de":{"TITLE_BASKET":"Tasche"}}' \
-APPLICATION_CSS_VARIABLES='{"--theme-primary":"#123456","--theme-accent":"#ffcc00"}' \
+APPLICATION_CSS_VARIABLES='{"--theme-primary":"#123456","--theme-accent":"#ffcc00","--theme-warn":"#ff3e3e","--theme-background":"#101820","--theme-background-lighter":"#1f2a34","--theme-background-dark":"#05080b","--theme-text":"#f8fafc","--theme-text-dark":"#94a3b8","--theme-thumbnail-border":"1px solid #ffcc00"}' \
 npm start
 ```
 
@@ -166,6 +166,7 @@ docker run --rm -p 127.0.0.1:3000:3000 \
   -e APPLICATION_SHOW_GITHUB_LINKS=false \
   -e APPLICATION_SHOW_SUPPORT_LINKS=false \
   -e APPLICATION_TRANSLATION_OVERRIDES='{"*":{"TITLE_BASKET":"Bag","TITLE_LOGIN":"Sign in"}}' \
+  -e APPLICATION_CSS_VARIABLES='{"--theme-primary":"#123456","--theme-accent":"#ffcc00","--theme-warn":"#ff3e3e","--theme-background":"#101820","--theme-background-lighter":"#1f2a34","--theme-background-dark":"#05080b","--theme-text":"#f8fafc","--theme-text-dark":"#94a3b8","--theme-thumbnail-border":"1px solid #ffcc00"}' \
   ghcr.io/justsml/juice-shop:latest
 ```
 
