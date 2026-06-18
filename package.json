@@ -21,15 +21,16 @@
   ],
   "homepage": "https://owasp-juice.shop",
   "bugs": {
-    "url": "https://github.com/juice-shop/juice-shop/issues"
+    "url": "https://github.com/justsml/juice-shop/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/juice-shop/juice-shop.git"
+    "url": "https://github.com/justsml/juice-shop.git"
   },
   "license": "MIT",
   "author": "Björn Kimminich <bjoern.kimminich@owasp.org> (https://kimminich.de)",
   "contributors": [
+    "Dan Levy",
     "Björn Kimminich",
     "Jannik Hollenbach",
     "Aashish683",

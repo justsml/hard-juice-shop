@@ -1,9 +1,14 @@
 FROM node:24 AS installer
 COPY . /juice-shop
 WORKDIR /juice-shop
-RUN npm install -g typescript@~5.3.3
-RUN npm install --omit=dev --unsafe-perm
-RUN npm dedupe --omit=dev
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME/bin:$PATH"
+RUN corepack enable && corepack prepare pnpm@11.1.1 --activate
+RUN pnpm add -g typescript@~5.3.3
+RUN pnpm install --prod --ignore-scripts --no-frozen-lockfile
+RUN cd frontend && pnpm install --no-frozen-lockfile && pnpm run build
+RUN pnpm run --silent build:server || true
+RUN pnpm dedupe --prod
 RUN rm -rf frontend/node_modules
 RUN rm -rf frontend/.angular
 RUN rm -rf frontend/src/assets
